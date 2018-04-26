@@ -1,6 +1,6 @@
 node {
 stage "checkout"
-def repositoryUrl = "https://github.com/g0t4/jenkins2-course-spring-petclinic.git"
+def repositoryUrl = "https://github.com/phalcon30964/jenkins2-course-spring-boot.git"
 git "${repositoryUrl}"
 
 stage "build"
