@@ -12,6 +12,6 @@ def artifactPath = "target/*.*"
 sh "${mvn} clean package"
 
 stage "archive"
-archiveArtifacts "${artifactPath}"
+archiveArtifacts allowEmptyArchive: true, artifacts: 'target/.jar,target/.war', onlyIfSuccessful: true
         
 } 
