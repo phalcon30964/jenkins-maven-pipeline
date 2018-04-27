@@ -7,7 +7,7 @@ stage "build"
 def mvn_version = 'Maven 3.5.3'
 def mvn_home = tool "${mvn_version}"
 def mvn = "${mvn_home}/bin/mvn"
-def artifactPath = "target/*.jar"
+def artifactPath = "target/*.*"
 
 sh "${mvn} clean package"
 
