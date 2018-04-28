@@ -17,6 +17,6 @@ archiveArtifacts allowEmptyArchive: true, artifacts: 'target/*.war', onlyIfSucce
 step([$class: 'JUnitResultArchiver', testResults: 'target/surefire-reports/TEST-*.xml'])
 
 stage "publishing reports"
-publishHTML(target: [allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'targe/site/jacoco', reportFiles: 'index.html', reportName: 'Cover Coverage', reportTitles: ''])
+publishHTML(target: [allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/site/jacoco/', reportFiles: 'index.html', reportName: 'Cover Coverage', reportTitles: ''])
 
 } 
